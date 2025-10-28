@@ -13,3 +13,8 @@ async def health():
 @app.get("/hello")
 async def hello():
     return {"message": f"The environment variable value of of MY_VARIABLE is: {os.getenv('MY_VARIABLE')}"}
+
+
+@app.get("/love")
+async def love():
+    return {"message": "Heabin! I love you so much!! I love you and our daughter Sion"}
