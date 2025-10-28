@@ -91,8 +91,10 @@ Build Docker image and run the container:
 
 ```bash
 docker build -t fastapi-app . 
-docker build --no-cache -t fastapi-app . #(to avoid cached data in Docker)
+docker build --no-cache -t fastapi-app . # to avoid cached data in Docker
 docker run -d -p 8080:8080 fastapi-app
+docker run -d -p 8080:8080 --env-file .env fastapi-app # to use the env file
+
 
 # Optional for Nginx/SSL
 docker run -d --name fastapi-app -p 127.0.0.1:8080:8080 fastapi-app
