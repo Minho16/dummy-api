@@ -90,7 +90,8 @@ cd <project-folder>
 Build Docker image and run the container:
 
 ```bash
-docker build -t fastapi-app .
+docker build -t fastapi-app . 
+docker build --no-cache -t fastapi-app . #(to avoid cached data in Docker)
 docker run -d -p 8080:8080 fastapi-app
 
 # Optional for Nginx/SSL
